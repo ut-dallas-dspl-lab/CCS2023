@@ -5,8 +5,8 @@
 2. To attack non-linear models:
 
 **Foolbox library change for our attacks**:
-    Non-linear foolbox library (all the changes): https://github.com/VibhaBelavadi/foolbox/tree/l2-mc\
-    Foolbox files modified in foolbox library:\
+    Non-linear foolbox library (all the changes): https://github.com/VibhaBelavadi/foolbox/tree/l2-mc
+    **Foolbox files modified in foolbox library**:\
         base.py: Base class for all attacks\
         projected_gradient_descent.py: Class for projected gradient descent\
         gradient_descent.py: super class for projected gradient descent\
