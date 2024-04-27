@@ -4,7 +4,7 @@
 
 2. To attack non-linear models:
 
-**Foolbox library change for our attacks**:
+**Foolbox library change for our attacks**:\
     Non-linear foolbox library (all the changes): https://github.com/VibhaBelavadi/foolbox/tree/l2-mc
     **Foolbox files modified in foolbox library**:\
         base.py: Base class for all attacks\
