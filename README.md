@@ -24,7 +24,7 @@ Steps to run attacks on CelebA:
 
    where LABEL can be any of {gender, attractive, young, glasses}.
 
-3. To attack using readly trained models located in "models_celeba" and "ad_celeba_models", run: 
+3. To attack using readily trained models located in "models_celeba" and "ad_celeba_models", run: 
 
         python fb_pytorch_pgd_multiconcept.py 
 
