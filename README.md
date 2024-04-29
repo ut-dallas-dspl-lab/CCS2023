@@ -34,12 +34,11 @@ Steps to run attacks on CelebA:
 
    
 
-4. To display the final results, run:
+4. To display the final results, for attacking resnet50 run:
 
         python display_results.py 
 
-   for attacking resnet50, or  
+   for attacking adversarially trained Mobilenet run:  
 
         python display_results.py --traintype ad_train --modeltype mobile
 
-   for attacking adversarially trained Mobilenet. 
