@@ -1,0 +1,3 @@
+[submodule "foolbox"]
+	path = foolbox
+	url = https://github.com/VibhaBelavadi/foolbox/tree/l2-mc
