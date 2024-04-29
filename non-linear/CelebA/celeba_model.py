@@ -208,7 +208,7 @@ def train_save_model(label_index, output_file, train_loader, val_loader):
     model = nn.DataParallel(model).to(device)#cuda()        
     criterion = nn.CrossEntropyLoss().to(device)#cuda()
     optimizer = torch.optim.SGD(model.parameters(), lr=0.05, momentum=0.5, weight_decay=0.001)
-    num_epochs = 1
+    num_epochs = 50
 
     # training 
     model_ft, acc_hist = train(model, label_index, train_loader, val_loader, criterion, optimizer, num_epochs)
