@@ -24,15 +24,15 @@ Steps to run attacks on CelebA:
 
    where LABEL can be any of {gender, attractive, young, glasses}.
 
-3. To attack using readily trained models located in "models_celeba" and "ad_celeba_models", run: 
+3. You can also attack using readily trained models located in "models_celeba" and "ad_celeba_models". To attack resnet50, run:  
 
         python fb_pytorch_pgd_multiconcept.py 
 
-   to attack resnet50 or run: 
+ To attack adversarially trained Mobilnet, run: 
 
         python fb_pytorch_pgd_multiconcept.py --model ad_train 
 
-   to attack adversarially trained Mobilnet
+   
 
 4. To display the final results, run:
 
