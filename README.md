@@ -1,4 +1,4 @@
-The repository contain a foolbox submodule with custom attacks presented in our CCS paper entitled "Attack Some while Protecting Others: Selective Attack Strategies for Attacking and Protecting Multiple Concepts". To recursively clone the repository, run:
+The repository contain a foolbox submodule (in "lib") with custom attacks presented in our CCS paper entitled "Attack Some while Protecting Others: Selective Attack Strategies for Attacking and Protecting Multiple Concepts". To recursively clone the repository, run:
 
         git clone --recursive https://github.com/VentiAwake/CCS2023.git 
 
