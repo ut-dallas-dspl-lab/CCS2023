@@ -8,7 +8,7 @@ The repository contain a foolbox submodule (in "lib") with custom attacks presen
 
 2. To attack non-linear models:
 
-Example: Steps to run attacks on CelebA:
+Steps to run attacks on CelebA:
 
 1.) Download the CelebA data, make sure the root is "data/celeba"
 
@@ -34,4 +34,22 @@ Example: Steps to run attacks on CelebA:
    for attacking adversarially trained Mobilenet run:  
 
         python display_results.py --traintype ad_train --modeltype mobile
+
+
+Steps to run attacks on UTKFace:
+
+1.) Download the UTKFace data, make sure the root is "data/utkface"
+
+
+2.) To train your own UTKFace models, run: 
+
+        jupyter execute UTKFace_train-age.ipynb UTKFace_train-gen.ipynb UTKFace_train-eth.ipynb UTKFace_train_utils.py
+
+3.) To attack, run:
+
+        python fb_pgd_UTKFace.py 
+
+4.) To display the final results, run:
+
+        jupyter execute pgd_metrics_UTKFace-exp.ipynb
 

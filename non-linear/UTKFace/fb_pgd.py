@@ -8,6 +8,8 @@ import pandas as pd
 import torch
 
 from fb_utils import *
+import sys
+sys.path.insert(0,'../../lib')
 
 import eagerpy as ep
 from foolbox import Misclassification

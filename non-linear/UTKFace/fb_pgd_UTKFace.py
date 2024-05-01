@@ -11,7 +11,7 @@ from foolbox import Misclassification
 import foolbox.attacks as fa
 
 import sys
-sys.path.insert(0, '../')
+sys.path.insert(0, '../../lib')
 
 
 def orig_foolbox_attack(fmodel, images, labels, eps_val=0.4, num_steps=50, alpha=0.025, lnorm='linf'):
