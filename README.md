@@ -1,4 +1,4 @@
-The repository contain a foolbox submodule (in "lib") with custom attacks presented in our CCS paper entitled "Attack Some while Protecting Others: Selective Attack Strategies for Attacking and Protecting Multiple Concepts". To recursively clone the repository, run:
+The repository contains a foolbox submodule (in "lib") with custom attacks presented in our CCS paper entitled "Attack Some while Protecting Others: Selective Attack Strategies for Attacking and Protecting Multiple Concepts". To recursively clone the repository, run:
 
         git clone --recursive https://github.com/VentiAwake/CCS2023.git 
 
@@ -44,6 +44,8 @@ Steps to run attacks on UTKFace:
 2.) To train your own UTKFace models, run: 
 
         jupyter execute UTKFace_train-age.ipynb UTKFace_train-gen.ipynb UTKFace_train-eth.ipynb UTKFace_train_utils.py
+
+    Trained models are available at: https://utdallas.box.com/s/903f929uqv4n8dqj1qfd9uqm45sgs255
 
 3.) To attack, run:
 
