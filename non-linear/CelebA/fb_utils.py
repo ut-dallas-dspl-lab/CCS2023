@@ -5,8 +5,9 @@ import pickle
 import pandas as pd
 import numpy as np
 from decimal import Decimal, ROUND_HALF_EVEN
-
 import eagerpy as ep
+import sys
+sys.path.insert(0,'../../lib')
 import foolbox
 import torch
 from torch.utils.data import DataLoader, Dataset
@@ -18,7 +19,7 @@ from torchvision import transforms
 ## CustomData for adversarial examples
 class CustomData(Dataset):
 
-    def __init__(self, pd_data, root_dir='celeba-dataset/img_align_celeba', all_concepts=False, img_pkl_filename=None, is_train=False):
+    def __init__(self, pd_data, root_dir='data/celeba/img_align_celeba', all_concepts=False, img_pkl_filename=None, is_train=False):
 
         self.root_dir = root_dir
         self.data_frame = pd_data

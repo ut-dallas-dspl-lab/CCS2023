@@ -2,17 +2,22 @@
 # Edit configuration: custom_foolbox_config same as above: python3.7 of anaconda3/bin/python
 
 from fb_utils import *
-from fb_pgd_UTKFace import *
+#from fb_pgd_UTKFace import *
 from fb_pgd import custom_fb_advx
+import warnings
+
 
 
 def orig_foolbox_attack(fmodel, images, labels, eps_val=0.4, num_steps=50, alpha=0.025, lnorm='linf'):
     if lnorm == 'linf':
         attack = foolbox.attacks.LinfProjectedGradientDescentAttack(rel_stepsize=alpha, abs_stepsize=None,
+                                                                    steps=num_steps)
     elif lnorm == 'l2':
         attack = foolbox.attacks.L2ProjectedGradientDescentAttack(rel_stepsize=alpha, abs_stepsize=None,
+                                                                    steps=num_steps)
     elif lnorm == 'l1':
         attack = foolbox.attacks.L1ProjectedGradientDescentAttack(rel_stepsize=alpha, abs_stepsize=None,
+                                                                    steps=num_steps)
     else:
         raise Exception("Enter a valid lnorm value: linf, l1 or l2")
 
@@ -102,7 +107,7 @@ if __name__ == "__main__":
     print(df_advx.head())
 
     # get the data loader and data_loader_dictionary
-    dataloader = get_dataloader(kwargs_func=kwargs, root_dir='celeba-dataset/img_align_celeba', batch_size=batch_size_val, pd_advx=df_advx)
+    dataloader = get_dataloader(kwargs_func=kwargs, root_dir='data/celeba/img_align_celeba', batch_size=batch_size_val, pd_advx=df_advx)
 
     # CelebA dataset
     # standard training
