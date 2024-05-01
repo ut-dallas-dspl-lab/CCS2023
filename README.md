@@ -45,7 +45,7 @@ Steps to run attacks on UTKFace:
 
         jupyter execute UTKFace_train-age.ipynb UTKFace_train-gen.ipynb UTKFace_train-eth.ipynb UTKFace_train_utils.py
 
-    Trained models are available at: https://utdallas.box.com/s/903f929uqv4n8dqj1qfd9uqm45sgs255
+  * Trained models are available at: https://utdallas.box.com/s/903f929uqv4n8dqj1qfd9uqm45sgs255
 
 3.) To attack, run:
 
