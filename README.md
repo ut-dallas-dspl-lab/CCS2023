@@ -38,7 +38,7 @@ Steps to run attacks on CelebA:
 
 Steps to run attacks on UTKFace:
 
-1.) Download the UTKFace data, make sure the root is "data/utkface"
+1.) Download the UTKFace data, make sure the root is "utkcropped"
 
 
 2.) To train your own UTKFace models, run: 
