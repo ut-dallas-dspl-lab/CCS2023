@@ -10,7 +10,7 @@ The repository contains a foolbox submodule (in "lib") with custom attacks prese
 
 Steps to run attacks on CelebA:
 
-1.) Download the CelebA data, make sure the root is "data/celeba"
+1.) Download the CelebA data to the non-linear/CelebA folder, make sure the root is "data/celeba"
 
 2.) To train your own CelebA models, run: 
 
@@ -38,7 +38,7 @@ Steps to run attacks on CelebA:
 
 Steps to run attacks on UTKFace:
 
-1.) Download the UTKFace data, make sure the root is "utkcropped"
+1.) Download the UTKFace data to the non-linear/UTKFace folder, make sure the root is "utkcropped"
 
 
 2.) To train your own UTKFace models, run: 
