@@ -19,7 +19,7 @@ from torchvision import transforms
 ## CustomData for adversarial examples
 class CustomData(Dataset):
 
-    def __init__(self, pd_data, root_dir='data/utkface/', all_concepts=False, img_pkl_filename=None, is_train=False):
+    def __init__(self, pd_data, root_dir='data/celeba/img_align_celeba', all_concepts=False, img_pkl_filename=None, is_train=False):
 
         self.root_dir = root_dir
         self.data_frame = pd_data
@@ -158,21 +158,21 @@ def myhead(nf, nc):
 def get_pytorch_model(weights_dir='celeb_individual/saved_weights/original_data/models',
                       weights_file='pytorch-rn50-gender.pth', is_torch=True, num_classes=2,
                       cuda_flag=True):
-    #model = models.resnet50()
+    model = models.resnet50()
 
-    #modules = list(model.children())
-    #modules.pop(-1)
-    #modules.pop(-1)
+    modules = list(model.children())
+    modules.pop(-1)
+    modules.pop(-1)
     # print(modules)
 
-    #temp = nn.Sequential(nn.Sequential(*modules))
-    #tempchildren = list(temp.children())
-    #tempchildren.append(myhead(4096, num_classes))
+    temp = nn.Sequential(nn.Sequential(*modules))
+    tempchildren = list(temp.children())
+    tempchildren.append(myhead(4096, num_classes))
     # print(tempchildren)
 
-    #model = nn.Sequential(*tempchildren)
+    model = nn.Sequential(*tempchildren)
 
-
+    """
     model = models.__dict__['resnet50'](pretrained=True)
     modules = list(model.children())
     modules.pop(-1)
@@ -194,6 +194,7 @@ def get_pytorch_model(weights_dir='celeb_individual/saved_weights/original_data/
         )
     )
     model = nn.Sequential(*tempchildren)
+    """
 
     if weights_dir is None or weights_file is None:
         if str(next(model.parameters()).device) == 'cpu' and torch.cuda.is_available():
@@ -320,14 +321,8 @@ def get_pytorch_resnet_model(weights_dir=None,
 ## get foolbox resnet-50 model from the model weights
 def get_foolbox_model(modeltype='resnet50', weights_file='pytorch-r50-young-new.pth', dev='cuda:1',
                       num_classes=2, is_torch=True, preprocess=True, models_dir=None):
-    if modeltype == 'resnet50':
-        print('load resnet50')
-        model = get_pytorch_resnet_model(weights_dir=models_dir, weights_file=weights_file,
-                               is_torch=is_torch, num_classes=num_classes)
-    else:
-        print('load ad_mobilenet_v2')
-        model = get_pytorch_mobilenet_model(weights_dir=models_dir, weights_file=weights_file,
-                               is_torch=is_torch, num_classes=num_classes)
+    model = get_pytorch_model(weights_dir=models_dir, weights_file=weights_file,
+                           is_torch=is_torch, num_classes=num_classes)
     model.eval()
     model = model.to(dev)
     if preprocess:
