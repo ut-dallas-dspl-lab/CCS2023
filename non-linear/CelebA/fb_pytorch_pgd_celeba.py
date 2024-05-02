@@ -5,6 +5,7 @@ from fb_utils import *
 #from fb_pgd_UTKFace import *
 from fb_pgd import custom_fb_advx
 import warnings
+from pathlib import Path
 
 
 
@@ -108,6 +109,10 @@ if __name__ == "__main__":
 
     # get the data loader and data_loader_dictionary
     dataloader = get_dataloader(kwargs_func=kwargs, root_dir='data/celeba/img_align_celeba', batch_size=batch_size_val, pd_advx=df_advx)
+
+    #create output folder
+    output_dir = './final_exp_celeba'
+    path.mkdir(output_dir)
 
     # CelebA dataset
     # standard training
