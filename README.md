@@ -49,9 +49,9 @@ Steps to run attacks on UTKFace:
 
 3.) To attack, run:
 
-        python fb_pgd_UTKFace.py 
+        python fb_pytorch_pgd_utk.py  
 
 4.) To display the final results, run:
 
-        jupyter execute pgd_metrics_UTKFace-exp.ipynb
+        python display_results_utkface.py 
 
