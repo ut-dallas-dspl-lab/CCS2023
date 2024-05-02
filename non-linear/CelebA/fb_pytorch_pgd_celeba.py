@@ -112,7 +112,7 @@ if __name__ == "__main__":
 
     #create output folder
     output_dir = './final_exp_celeba'
-    path.mkdir(output_dir)
+    Path(output_dir).mkdir(exist_ok=True)
 
     # CelebA dataset
     # standard training
