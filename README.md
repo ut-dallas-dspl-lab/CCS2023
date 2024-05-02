@@ -2,6 +2,15 @@ The repository contains a foolbox submodule (in "lib") with custom attacks prese
 
         git clone --recursive https://github.com/VentiAwake/CCS2023.git 
 
+You can create a Conda environment with the supplied yaml file "atk.yaml":
+        
+        conda env create --name NAME --file atk.yaml 
+
+where NAME is the name of the environment. Activate the environment, everything should run following the instructions below.
+
+
+
+
 1. To attack linear models, run: 
 
         python linearProg.py
